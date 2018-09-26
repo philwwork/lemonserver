@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<!--  © Copyright 2018 Phillip Walters, All Rights Reserved.-->
+<head>
+<meta charset="utf-8">
+<title>Game</title>
+<link rel="stylesheet" href="game.css">
+
+</head>
+<body>
+
+
+  <div id='mainDiv'>
+  
+    <h1>Lemonade Stand</h1>
+  
+  <span id='leftdiv'>
+    <h2>Game</h2>
+    <button id='end_turn'>End turn</button>
+    <div id='left_container'>
+    
+      <div id='left_content'></div>
+    </div>
+  </span>
+  
+  <span id='rightdiv'>
+
+    <h2>Store</h2>
+    <button id='reset'>Reset</button>
+
+    <div id='right_container'>
+    
+      <div id='right_content'>
+			
+			
+		 <div class='item'>
+            <span class='price'>&cent;<span id='sugarPrice'>0</span></span> 
+            <span class='count'>Sugar <input
+            type="number" name="sugar" id="sugar" min="0" max="500" step="1"
+            value="0"></span>
+        </div>
+        
+        <div class='item'>
+          <span class='price'>&cent;<span id='lemonsPrice'>0</span></span> 
+          <span class='count'>Lemons <input type="number"
+            name="lemons" id="lemons" min="0" max="500" step="1" value="0"></span>
+        </div>
+
+		<div class='item'>
+            <span class='price'>&cent;<span id='waterPrice'>0</span></span> 
+            <span class='count'>Water <input type="number" name="water" id="water" min="0" max="500" step="1"
+            value="0"></span>
+        </div>
+
+        <div class='item'>
+            <span class='price'>&cent;<span id='cupsPrice'>0</span></span> 
+           <span class='count'>Cups <input
+            type="number" name="cups" id="cups" min="0" max="500" step="1"
+            value="0"></span>
+        </div>
+        
+        <div class='item'>
+            <span class='price'>&cent;<span id='icePrice'>0</span></span> 
+            <span class='count'>Ice <input
+            type="number" name="ice" id="ice" min="0" max="500" step="1"
+            value="0"></span>
+        </div>
+
+        
+
+        <div id='totalCostItem'>Total cost &cent;<span id='totalCost'>0</span></div>
+      
+      
+      </div>
+   
+    </div>
+
+
+  </span>
+
+  <div id='bottomdiv'>
+        <div id='bottom_content'>
+        <span id='moneyLabel' class='supplyLabel'>Money &cent;<span id='currentMoney'>0</span></span>
+        <span class='supplyLabel'>Lemons:<span id='currentLemons' class='supply'>0</span></span>
+        <span class='supplyLabel'>Ice:<span id='currentIce' class='supply'>0</span></span>
+        <span class='supplyLabel'>Water:<span id='currentWater' class='supply'>0</span></span>
+        <span class='supplyLabel'>Sugar:<span id='currentSugar' class='supply'>0</span></span>
+        <span class='supplyLabel'>Cups:<span id='currentCups' class='supply'>0</span></span>
+
+        </div>
+  </div>
+
+  </div>
+  
+  <script>
+  			if (sessionStorage.getItem("token")==null)
+			{
+				window.location="./invalid.html";
+			}
+
+	  </script>
+  <script src="gamemain.js" type="text/javascript"></script>
+  
+</body>
+</html>

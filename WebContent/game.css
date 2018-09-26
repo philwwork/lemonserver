@@ -1,0 +1,207 @@
+body {
+	background-color: Green;
+	font-size: 14px;
+	font-weight: normal;
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+	text-shadow: 0px 2px 3px yellow;
+	margin: 15px;
+	color: darkbrown;
+}
+
+input {
+	font-size: 20pt;
+	border-radius: 0.5em;
+	text-shadow: 0px 2px 3px lightbrown;
+	text-align: center;
+	width: 3em;
+			color: darkgreen;
+}
+
+input:focus {
+	outline: 0 !important;
+}
+
+h1 {
+	text-align: center;
+	text-shadow: 0px 2px 3px yellow;
+	transform: rotate(7deg);
+	font-size: 29pt;
+	color: darkbrown;
+}
+
+h2 {
+	text-align: left;
+	text-shadow: 0px 2px 3px yellow;
+	transform: rotate(-7deg); 
+	font-size:20pt;
+	color: darkbrown;
+}
+
+.miscText
+{
+	text-align: left;
+	text-shadow: 0px 2px 3px yellow;
+
+	font-size:20pt;
+}
+
+button {
+	border: 0px;
+	border-radius: 0.5em;
+	background: linear-gradient(to top, lightyellow 1%, yellow 90%);
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+	text-shadow: 0px 2px 3px lightgreen;
+	font-size: 20pt;
+	text-align: left;
+	color: darkbrown;
+}
+
+button:focus {
+	outline: 0 !important;
+}
+
+button:active {
+	position: relative;
+	top: 5px;
+}
+
+button:hover {
+	background: linear-gradient(to bottom, lightyellow 20%, yellow 90%);
+}
+
+
+.item {
+  font-size:20pt;
+	margin-bottom: 20px;
+	text-align: right;
+}
+
+.price {
+
+  text-align: left;
+  float: left;
+}
+
+.count {
+   text-align:right;
+}
+
+#mainDiv
+{
+  text-align: center;
+}
+#totalCostItem
+{
+  text-align: center;
+}
+
+
+#leftdiv {
+  
+  display: inline-block;
+  margin-right:20px;
+}
+
+#rightdiv {
+  display: inline-block;
+  margin-left:20px;
+}
+
+#left_container {
+	border: 1px solid #ccc;
+	border-radius: 1em;
+
+	padding: 20px;
+	margin-top: 10px;
+	background: linear-gradient(to bottom, hsl(60, 100%, 55%) 10%, hsl(60, 100%, 70%) 90%);
+}
+
+#right_container {
+	border: 1px solid #ccc;
+	border-radius: 1em;
+	padding: 20px;
+	margin-top: 10px;
+	background: linear-gradient(to bottom, hsl(60, 100%, 55%) 10%, hsl(60, 100%, 70%) 90%);
+}
+
+
+#left_content {
+  width:470px;
+  height:320px;
+  text-align:left;
+  overflow: auto;
+}
+
+#right_content {
+  
+  width: 350px;
+  height:320px;
+  overflow: auto;
+    
+}
+
+
+#bottomdiv {
+    border: 1px solid #ccc;
+
+    margin: auto;
+	border-radius: 1em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+	margin-top: 10px;
+	width: 900px;
+	background: linear-gradient(to bottom, hsl(60, 100%, 55%) 10%, hsl(60, 100%, 70%) 90%)
+}
+
+#bottom_content
+{
+    margin-left: auto;
+    margin-right: auto;
+	height: 30px;
+	width: 880px;
+	text-shadow: 0px 2px 3px lightbrown;
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+	font-size: 14pt;
+	font-style: italic;
+}
+
+.supply
+{
+  display:inline-block;
+  width: 2em;
+}
+
+.supplyLabel
+{
+  border: 1px inset BurlyWood;
+  border-radius: 0.5em;
+  padding: 10px;
+  margin: 5px;
+
+  background: linear-gradient(to bottom,BurlyWood, Yellow);
+}
+
+#moneyLabel
+{
+  border-radius: 0.1em;
+  padding: 10px;
+  margin-right: 25px;
+  background: linear-gradient(to bottom,BurlyWood,Yellow);
+  
+}
+
+#currentMoney
+{
+  display:inline-block;
+  width: 3.5em;
+}
+
+#username
+{
+		width: 13em;
+}
+
+#password
+{
+	width: 13em;
+}

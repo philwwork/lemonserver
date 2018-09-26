@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="game.css">
+<title>Insert title here</title>
+</head>
+<body onload="getToken()">
+
+
+
+<button  id="startGame" onclick = "startGame()">Go to game</button>
+<p>Login test page</p>
+
+
+
+
+<script type="text/javascript">
+
+var serverAddress="localhost:8080";
+
+var token = sessionStorage.getItem("token");
+
+function getToken()
+{
+	
+	var startGameButton = document.getElementById("startGame");
+	startGameButton.removeAttribute("disabled");
+	
+	document.body.appendChild(document.createTextNode("Client side token: " + token));
+	showUser();
+}
+
+function showUser()
+{
+	var xmlhttp=new XMLHttpRequest();
+		
+		xmlhttp.onreadystatechange=function()
+		{
+	      if (xmlhttp.status==200 && xmlhttp.readyState==4)
+			{  
+				var userString =xmlhttp.responseText;
+				document.body.appendChild(document.createTextNode(" Server side user : " + userString));
+			}
+		}
+		
+
+		xmlhttp.open("GET","http://" + serverAddress + "/GameServer/Game/user.json",true);
+		xmlhttp.setRequestHeader("token", token);
+		xmlhttp.send();
+}
+
+function startGame()
+{
+	var startGameButton = document.getElementById("startGame");
+	startGameButton.innerText="hi";
+	
+	
+	window.location="./game.html";
+}
+</script>
+</body>
+</html>

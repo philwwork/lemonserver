@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Game launcher</title>
+
+<link rel="stylesheet" href="game.css">
+
+
+</head>
+<body>
+
+
+<p>
+<span class="miscText">Username:</span> <input type="text" id="username" id="username" value="phil"><br>
+<span class="miscText">Password:</span> <input type="password" id="password" id="password" value="asdf">
+</p>
+
+
+
+
+<button onclick="doLogin()">Login</button>
+
+<script type='text/javascript'>
+
+var serverAddress = "localhost:8080";
+function doLogin()
+{
+var jsonLogin = {};
+
+jsonLogin.username = document.getElementById("username").value;
+jsonLogin.password = document.getElementById("password").value;
+
+	
+login = JSON.stringify(jsonLogin);
+
+var xmlhttp=new XMLHttpRequest();
+	
+	xmlhttp.onreadystatechange=function()
+	{
+      if (xmlhttp.status==200 && xmlhttp.readyState==4)
+		{  
+			var token =xmlhttp.responseText;
+
+    	  
+			sessionStorage.setItem("token", token);
+			window.location="./logintest.html";
+
+		}
+		
+	}
+	
+	xmlhttp.open("POST","http://"+serverAddress + "/GameServer/Game/login.json",true);
+	xmlhttp.send(login);
+}
+
+</script>
+
+</body>
+</html>
